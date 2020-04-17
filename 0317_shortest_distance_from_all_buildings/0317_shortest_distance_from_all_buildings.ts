@@ -71,8 +71,6 @@ const shortestDistance = (grid: number[][]): number => {
     }
   }
 
-  console.log(distances);
-
   for (let row = 0; row < grid.length; row++) {
     for (let column = 0; column < grid[row].length; column++) {
       if (reach[row][column] === totalBuildings) {
