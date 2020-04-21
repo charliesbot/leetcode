@@ -16,5 +16,5 @@ export const gcdOfStrings = (str1: string, str2: string): string => {
     return gcdOfStrings(str1.slice(str2.length), str2);
   }
 
-  return gcdOfStrings(str2.slice(str1.length), str1);
+  return gcdOfStrings(str1, str2.slice(str1.length));
 };

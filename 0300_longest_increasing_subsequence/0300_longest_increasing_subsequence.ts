@@ -5,7 +5,7 @@
 
 export const lengthOfLIS = (nums: number[]) => {
   let max = 1;
-  let result = new Array(nums.length).fill(1);
+  const result = new Array(nums.length).fill(1);
   for (let i = 1; i <= nums.length; i++) {
     const right = nums[i];
     for (let j = 0; j < i; j++) {
