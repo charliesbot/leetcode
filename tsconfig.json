@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
-    "target": "esnext"
+    "target": "esnext",
+    "plugins": [
+      {
+        "name": "typescript-deno-plugin"
+      }
+    ]
   }
 }
