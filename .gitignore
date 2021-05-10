@@ -33,3 +33,12 @@
 *.exe
 *.out
 *.app
+
+# Bazel
+
+bazel
+bazel-bazel-test
+bazel-bin
+bazel-genfiles
+bazel-out
+bazel-testlogs
