@@ -34,11 +34,6 @@
 *.out
 *.app
 
-# Bazel
-
-bazel
-bazel-bazel-test
-bazel-bin
-bazel-genfiles
-bazel-out
-bazel-testlogs
+# Ignore all bazel-* symlinks. There is no full list since this can change
+# based on the name of the directory bazel is cloned into.
+bazel-*
