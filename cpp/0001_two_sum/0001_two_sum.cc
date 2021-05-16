@@ -3,7 +3,6 @@
 #include <unordered_map>
 #include <vector>
 
-using std::cout;
 using std::unordered_map;
 using std::vector;
 

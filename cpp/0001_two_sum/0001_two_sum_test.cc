@@ -1,4 +1,4 @@
-#include "cpp/0001_two_sum/0001_two_sum.h"
+#include "0001_two_sum.h"
 #include <gtest/gtest.h>
 #include <vector>
 

@@ -2,7 +2,6 @@
 #include <iostream>
 #include <vector>
 
-using std::cout;
 using std::vector;
 
 void dfs(vector<vector<char>> &grid, size_t row, size_t column) {

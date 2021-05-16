@@ -1,4 +1,4 @@
-#include "cpp/0200_number_of_islands/0200_number_of_islands.h"
+#include "0200_number_of_islands.h"
 #include <gtest/gtest.h>
 #include <vector>
 
