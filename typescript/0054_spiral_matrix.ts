@@ -2,14 +2,9 @@
  * Given a matrix of m x n elements (m rows, n columns),
  * return all elements of the matrix in spiral order.
  */
-
-/**
- * @param {number[][]} matrix
- * @return {number[]}
- */
-var spiralOrder = function(matrix) {
+const spiralOrder = function (matrix: number[][]): number[] {
   if (matrix.length === 0) {
-    return matrix;
+    return [];
   }
   const result = [];
   const itemsLength = matrix.length * matrix[0].length;
@@ -19,7 +14,7 @@ var spiralOrder = function(matrix) {
     UP: 1,
     DOWN: 2,
     LEFT: 3,
-    RIGHT: 4
+    RIGHT: 4,
   };
   let limitBottom = 1;
   let currentDirection = DIRECTION.RIGHT;
@@ -73,6 +68,11 @@ var spiralOrder = function(matrix) {
 
 // const example = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]];
 
-const example = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]];
+const example = [
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10, 11, 12],
+  [13, 14, 15, 16],
+];
 
 console.log(spiralOrder(example));

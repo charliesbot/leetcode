@@ -1,15 +1,3 @@
-// type Func = (...args: any[]) => any;
-const debounce = <T extends Func>(fn: T, delay: number) => {
-  let timeout: number;
-  return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => fn(...args), delay);
-  };
-};
-
-const d = debounce((x: number, y: number) => x + y, 200);
-d(1, 2);
-
 const merge = (intervals: number[][]) => {
   if (intervals.length <= 1) {
     return intervals;

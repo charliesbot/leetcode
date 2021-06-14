@@ -1,17 +1,17 @@
-function ListNode(val: number) {
-  this.val = val;
-  this.next = null;
+class ListNode {
+  val: number;
+  next: ListNode | null;
+  constructor(val: number) {
+    this.val = val;
+    this.next = null;
+  }
 }
 
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var swapPairs = function(head) {
+const swapPairs = function (head: ListNode) {
   let newHead = new ListNode(-1);
   newHead.next = head;
-  let current = newHead;
-  let stack = [];
+  let current: ListNode | null = newHead;
+  let stack: ListNode[] = [];
   while (current) {
     stack.push(current);
     if (stack.length === 3) {

@@ -1,4 +1,4 @@
-const isPalindrome = word => {
+const isPalindrome = (word: string) => {
   let left = 0;
   let right = word.length - 1;
   while (left < right) {
@@ -11,7 +11,7 @@ const isPalindrome = word => {
   return true;
 };
 
-var countSubstrings = function(s) {
+var countSubstrings = function (s: string) {
   let counter = 0;
   for (let i = 0; i < s.length; i++) {
     let limit = 1;

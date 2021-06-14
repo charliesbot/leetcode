@@ -5,7 +5,7 @@
  * the plus + or minus sign -, non-negative integers and empty spaces .
  */
 
-const getNumber = (s: string, index: number): [number, number] => {
+export const getNumber = (s: string, index: number): [number, number] => {
   let helper = index;
   while (helper + 1 < s.length && isNumber(s[helper + 1])) {
     helper++;

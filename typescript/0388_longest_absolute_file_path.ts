@@ -1,7 +1,7 @@
-const lengthLongestPath = function(input: string) {
+const lengthLongestPath = function (input: string) {
   const lines = input.split("\n");
   let max = 0;
-  let pathLength = { 0: 0 };
+  let pathLength: { [key: string]: number } = { "0": 0 };
 
   for (let i = 0; i < lines.length; i++) {
     const name = lines[i].replace(/\t/g, "");

@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "plugins": [
-      {
-        "name": "typescript-deno-plugin"
-      }
-    ]
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "importHelpers": true,
+    "declaration": false,
+    "sourceMap": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true
   }
 }

@@ -18,5 +18,6 @@ export const twoSum = (nums: number[], target: number) => {
 
     hash[target - num] = index;
   }
-};
 
+  return [Infinity, Infinity];
+};

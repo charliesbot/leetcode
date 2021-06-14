@@ -5,15 +5,17 @@ class TreeNode {
 
   constructor(val: number) {
     this.val = val;
+    this.left = null;
+    this.right = null;
   }
 }
 
 interface ResultNode {
-  node: TreeNode;
+  node: TreeNode | null;
   dist: number;
 }
 
-const dfs = (root: TreeNode): ResultNode => {
+const dfs = (root: TreeNode | null): ResultNode => {
   if (root === null) {
     return { node: null, dist: 0 };
   }
