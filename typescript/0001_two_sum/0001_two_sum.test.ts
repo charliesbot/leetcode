@@ -1,7 +1,6 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { twoSum } from "./0001_two_sum.ts";
+import { twoSum } from "./0001_two_sum";
 
-Deno.test(function twoSum1() {
+test("twoSum", () => {
   const input = [2, 7, 11, 15];
-  assertEquals(twoSum(input, 9), [0, 1]);
+  expect(twoSum(input, 9)).toStrictEqual([0, 1]);
 });

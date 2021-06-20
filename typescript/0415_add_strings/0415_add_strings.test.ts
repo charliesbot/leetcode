@@ -1,8 +1,7 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { addStrings } from "./0415_add_strings.ts";
+import { addStrings } from "./0415_add_strings";
 
-Deno.test(function test1() {
+test("test1", () => {
   const num1 = "1";
   const num2 = "1";
-  assertEquals(addStrings(num1, num2), "2");
+  expect(addStrings(num1, num2)).toBe("2");
 });

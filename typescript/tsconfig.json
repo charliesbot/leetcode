@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "module": "esnext",
+    "moduleResolution": "node",
     "lib": ["dom", "esnext"],
     "importHelpers": true,
     "declaration": false,

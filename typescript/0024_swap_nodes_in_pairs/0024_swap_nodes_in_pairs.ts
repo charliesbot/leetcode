@@ -30,12 +30,12 @@ const swapPairs = function (head: ListNode) {
   return newHead.next;
 };
 
-function test() {
-  const head = new ListNode(1);
-  head.next = new ListNode(2);
-  head.next.next = new ListNode(3);
-  head.next.next.next = new ListNode(4);
-  swapPairs(head);
-}
+// function test() {
+// const head = new ListNode(1);
+// head.next = new ListNode(2);
+// head.next.next = new ListNode(3);
+// head.next.next.next = new ListNode(4);
+// swapPairs(head);
+// }
 
-test();
+// test();

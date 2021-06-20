@@ -5,13 +5,20 @@
  *     this.next = null;
  * }
  */
-/**
- * @param {ListNode} l1
- * @param {ListNode} l2
- * @return {ListNode}
- */
-var mergeTwoLists = function(l1, l2) {
-  let head = new ListNode(-1);
+
+class ListNode0021 {
+  val;
+  next: ListNode0021 | null = null;
+  constructor(val: number) {
+    this.val = val;
+  }
+}
+
+var mergeTwoLists = function (
+  l1: ListNode0021 | null,
+  l2: ListNode0021 | null
+) {
+  let head = new ListNode0021(-1);
   let l3 = head;
   while (l1 && l2) {
     if (l1.val >= l2.val) {

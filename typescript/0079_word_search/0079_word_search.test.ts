@@ -1,49 +1,48 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { exist } from "./0079_word_search.ts";
+import { exist } from "./0079_word_search";
 
-Deno.test(function exist1() {
+test("exist1", () => {
   const board = [
     ["A", "B", "C", "E"],
     ["S", "F", "C", "S"],
     ["A", "D", "E", "E"],
   ];
-  assertEquals(exist(board, "ABCCED"), true);
+  expect(exist(board, "ABCCED")).toBeTruthy();
 });
 
-Deno.test(function exist2() {
+test("exist2", () => {
   const board = [
     ["A", "B", "C", "E"],
     ["S", "F", "C", "S"],
     ["A", "D", "E", "E"],
   ];
-  assertEquals(exist(board, "SEE"), true);
+  expect(exist(board, "SEE")).toBeTruthy();
 });
 
-Deno.test(function exist3() {
+test("exist3", () => {
   const board = [
     ["A", "B", "C", "E"],
     ["S", "F", "C", "S"],
     ["A", "D", "E", "E"],
   ];
-  assertEquals(exist(board, "ABCB"), false);
+  expect(exist(board, "ABCB")).toBeFalsy();
 });
 
-Deno.test(function exist4() {
+test("exist4", () => {
   const board = [
     ["C", "A", "A"],
     ["A", "A", "A"],
     ["B", "C", "D"],
   ];
 
-  assertEquals(exist(board, "AAB"), true);
+  expect(exist(board, "AAB")).toBeTruthy();
 });
 
-Deno.test(function exist5() {
+test("exist5", () => {
   const board = [
     ["A", "B", "C", "E"],
     ["S", "F", "E", "S"],
     ["A", "D", "E", "E"],
   ];
 
-  assertEquals(exist(board, "ABCESEEEFS"), true);
+  expect(exist(board, "ABCESEEEFS")).toBeTruthy();
 });

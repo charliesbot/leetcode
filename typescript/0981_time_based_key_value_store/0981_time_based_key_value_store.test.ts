@@ -1,5 +1,4 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { TimeMap } from "./0981_time_based_key_value_store.ts";
+import { TimeMap } from "./0981_time_based_key_value_store";
 
 const runner = (actions: string[], args: (string | number)[][]) => {
   let timeMap: any;
@@ -18,7 +17,7 @@ const runner = (actions: string[], args: (string | number)[][]) => {
   return output;
 };
 
-Deno.test(function timeMap1() {
+test("timeMap1", () => {
   const actions = ["TimeMap", "set", "get", "get", "set", "get", "get"];
   const args = [
     [],
@@ -32,10 +31,10 @@ Deno.test(function timeMap1() {
 
   const expectedOutput = [null, null, "bar", "bar", null, "bar2", "bar2"];
 
-  assertEquals(runner(actions, args), expectedOutput);
+  expect(runner(actions, args)).toStrictEqual(expectedOutput);
 });
 
-Deno.test(function timeMap2() {
+test("timeMap2", () => {
   const actions = ["TimeMap", "set", "set", "get", "get", "get", "get", "get"];
   const args = [
     [],
@@ -50,5 +49,5 @@ Deno.test(function timeMap2() {
 
   const expectedOutput = [null, null, null, "", "high", "high", "low", "low"];
 
-  assertEquals(runner(actions, args), expectedOutput);
+  expect(runner(actions, args)).toStrictEqual(expectedOutput);
 });

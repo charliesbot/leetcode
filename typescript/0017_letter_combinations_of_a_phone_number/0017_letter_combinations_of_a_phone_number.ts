@@ -2,7 +2,7 @@
  * Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
  *
  * A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
-*/
+ */
 
 const numbers = {
   "0": [" "],
@@ -14,17 +14,17 @@ const numbers = {
   "6": ["m", "n", "o"],
   "7": ["p", "q", "r", "s"],
   "8": ["t", "u", "v"],
-  "9": ["w", "x", "y", "z"]
+  "9": ["w", "x", "y", "z"],
 };
 
-var letterCombinations = function(digits) {
-  const result = [];
+const letterCombinations = function (digits: string) {
+  const result: string[] = [];
 
   if (!digits) {
     return result;
   }
 
-  const dfs = (index, acum) => {
+  const dfs = (index: number, acum: string) => {
     if (index === digits.length) {
       result.push(acum);
       return;
@@ -41,5 +41,3 @@ var letterCombinations = function(digits) {
 
   return result;
 };
-
-console.log(letterCombinations("20"));
