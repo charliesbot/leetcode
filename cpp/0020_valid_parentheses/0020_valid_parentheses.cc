@@ -10,20 +10,18 @@ using std::unordered_map;
 bool Solution::isValid(string s) {
   unordered_map<char, char> dict({{'(', ')'}, {'[', ']'}, {'{', '}'}});
   stack<char> stack;
-    std::cout << "heyyy" << "\n";
 
   for (const char &letter : s) {
-    std::cout << "heyyy" << "\n";
     if (dict.find(letter) != dict.end()) {
       stack.push(dict[letter]);
       continue;
     }
 
     if (stack.empty()) {
-        return false;
+      return false;
     }
 
-    const char& popped = stack.top();
+    const char &popped = stack.top();
 
     if (letter != popped) {
       return false;

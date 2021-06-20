@@ -1,12 +1,11 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { checkRecord } from "./0551_student_attendance_record_i.ts";
+import { checkRecord } from "./0551_student_attendance_record_i";
 
-Deno.test(function checkRecordI() {
+test("checkRecordI", () => {
   const input = "PPALLP";
-  assertEquals(checkRecord(input), true);
+  expect(checkRecord(input)).toBeTruthy();
 });
 
-Deno.test(function checkRecord2() {
+test("checkRecord2", () => {
   const input = "PPALLL";
-  assertEquals(checkRecord(input), false);
+  expect(checkRecord(input)).toBeFalsy();
 });

@@ -1,43 +1,42 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { numIslands } from "./0200_number_of_islands.ts";
-import { numIslandsBFS } from "./0200_number_of_islands.bfs.ts";
+import { numIslands } from "./0200_number_of_islands";
+import { numIslandsBFS } from "./0200_number_of_islands.bfs";
 
-Deno.test(function numberOfIslandsDFS1() {
+test("numberOfIslandsDFS1", () => {
   const input = [
     ["1", "1", "1", "1", "0"],
     ["1", "1", "0", "1", "0"],
     ["1", "1", "0", "0", "0"],
     ["0", "0", "0", "0", "0"],
   ];
-  assertEquals(numIslands(input), 1);
+  expect(numIslands(input)).toBe(1);
 });
 
-Deno.test(function numberOfIslandsDFS2() {
+test("numberOfIslandsDFS2", () => {
   const input = [
     ["1", "1", "0", "0", "0"],
     ["1", "1", "0", "0", "0"],
     ["0", "0", "1", "0", "0"],
     ["0", "0", "0", "1", "1"],
   ];
-  assertEquals(numIslands(input), 3);
+  expect(numIslands(input)).toBe(3);
 });
 
-Deno.test(function numberOfIslandsBFS1() {
+test("numberOfIslandsBFS1", () => {
   const input = [
     ["1", "1", "1", "1", "0"],
     ["1", "1", "0", "1", "0"],
     ["1", "1", "0", "0", "0"],
     ["0", "0", "0", "0", "0"],
   ];
-  assertEquals(numIslandsBFS(input), 1);
+  expect(numIslandsBFS(input)).toBe(1);
 });
 
-Deno.test(function numberOfIslandsBFS2() {
+test("numberOfIslandsBFS2", () => {
   const input = [
     ["1", "1", "0", "0", "0"],
     ["1", "1", "0", "0", "0"],
     ["0", "0", "1", "0", "0"],
     ["0", "0", "0", "1", "1"],
   ];
-  assertEquals(numIslandsBFS(input), 3);
+  expect(numIslandsBFS(input)).toBe(3);
 });

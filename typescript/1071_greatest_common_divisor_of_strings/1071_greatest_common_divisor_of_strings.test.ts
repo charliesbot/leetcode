@@ -1,14 +1,13 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { gcdOfStrings } from "./1071_greatest_common_divisor_of_strings.ts";
+import { gcdOfStrings } from "./1071_greatest_common_divisor_of_strings";
 
-Deno.test(function gcdOfStrings1() {
-  assertEquals(gcdOfStrings("ABCABC", "ABC"), "ABC");
+test("gcdOfStrings1", () => {
+  expect(gcdOfStrings("ABCABC", "ABC")).toBe("ABC");
 });
 
-Deno.test(function gcdOfStrings2() {
-  assertEquals(gcdOfStrings("ABABAB", "ABAB"), "AB");
+test("gcdOfStrings2", () => {
+  expect(gcdOfStrings("ABABAB", "ABAB")).toBe("AB");
 });
 
-Deno.test(function gcdOfStrings3() {
-  assertEquals(gcdOfStrings("LEET", "CODE"), "");
+test("gcdOfStrings3", () => {
+  expect(gcdOfStrings("LEET", "CODE")).toBe("");
 });

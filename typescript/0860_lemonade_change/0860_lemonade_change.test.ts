@@ -1,27 +1,26 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { lemonadeChange } from "./0860_lemonade_change.ts";
+import { lemonadeChange } from "./0860_lemonade_change";
 
-Deno.test(function lemonadeChange1() {
+test("lemonadeChange1", () => {
   const input = [5, 5, 5, 10, 20];
-  assertEquals(lemonadeChange(input), true);
+  expect(lemonadeChange(input)).toBeTruthy();
 });
 
-Deno.test(function lemonadeChange2() {
+test("lemonadeChange2", () => {
   const input = [5, 5, 10];
-  assertEquals(lemonadeChange(input), true);
+  expect(lemonadeChange(input)).toBeTruthy();
 });
 
-Deno.test(function lemonadeChange3() {
+test("lemonadeChange3", () => {
   const input = [10, 10];
-  assertEquals(lemonadeChange(input), false);
+  expect(lemonadeChange(input)).toBeFalsy();
 });
 
-Deno.test(function lemonadeChange4() {
+test("lemonadeChange4", () => {
   const input = [5, 5, 10, 10, 20];
-  assertEquals(lemonadeChange(input), false);
+  expect(lemonadeChange(input)).toBeFalsy();
 });
 
-Deno.test(function lemonadeChange5() {
+test("lemonadeChange5", () => {
   const input = [5, 5, 5, 5, 20, 20, 5, 5, 20, 5];
-  assertEquals(lemonadeChange(input), false);
+  expect(lemonadeChange(input)).toBeFalsy();
 });

@@ -1,17 +1,16 @@
-import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
-import { lengthOfLongestSubstring } from "./0003_longest_substring_without_repeating_characters.ts";
+import { lengthOfLongestSubstring } from "./0003_longest_substring_without_repeating_characters";
 
-Deno.test(function lengthOfLongestSubstring1() {
+test("lengthOfLongestSubstring1", () => {
   const input = "abcabcbb";
-  assertEquals(lengthOfLongestSubstring(input), 3);
+  expect(lengthOfLongestSubstring(input)).toEqual(3);
 });
 
-Deno.test(function lengthOfLongestSubstring2() {
+test("lengthOfLongestSubstring2", () => {
   const input = "bbbbb";
-  assertEquals(lengthOfLongestSubstring(input), 1);
+  expect(lengthOfLongestSubstring(input)).toEqual(1);
 });
 
-Deno.test(function lengthOfLongestSubstring3() {
+test("lengthOfLongestSubstring3", () => {
   const input = "pwwkew";
-  assertEquals(lengthOfLongestSubstring(input), 3);
+  expect(lengthOfLongestSubstring(input)).toEqual(3);
 });
