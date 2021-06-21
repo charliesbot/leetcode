@@ -6,3 +6,6 @@ Leetcode exercises
 
 ### Run C++ Tests
 `bazel test --test_output=all //cpp:tests`
+
+### Generate Compilation Database (for better autocomplete)
+`./generate_compilation_db.sh`

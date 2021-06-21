@@ -39,3 +39,4 @@
 bazel-*
 
 node_modules
+compile_commands.json
