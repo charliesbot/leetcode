@@ -12,4 +12,5 @@ sed -i.bak "s@__EXEC_ROOT__@${execroot}@" "${outfile}"
 echo "Compilation Database: ${outfile}"
 
 workspace="$(bazel info workspace)"
+rm -rf "${workspace}/compile_commands.json"
 ln -s "${outfile}" "${workspace}"
