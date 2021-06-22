@@ -5,10 +5,10 @@
  *
  * You may assume the given input string is always valid.
  * For example, "01:34", "12:09" are all valid. "1:34", "12:9" are all invalid.
-*/
+ */
 
-var nextClosestTime = function(time) {
-  let originalMinutes = time.substring(0, 2) * 60;
+var nextClosestTime = function (time: string) {
+  let originalMinutes = parseInt(time.substring(0, 2)) * 60;
   originalMinutes += parseInt(time.substring(3, 5));
   let minValue = Number.MAX_SAFE_INTEGER;
   let nextTime = "";
@@ -22,7 +22,7 @@ var nextClosestTime = function(time) {
 
   const list = Array.from(set);
 
-  const dfs = acumString => {
+  const dfs = (acumString: string) => {
     if (acumString.length === 4) {
       const hour = parseInt(acumString.substring(0, 2));
       const min = parseInt(acumString.substring(2));

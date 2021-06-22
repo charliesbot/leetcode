@@ -2,13 +2,13 @@
  * Given an integer array nums,
  * find the contiguous subarray (containing at least one number)
  * which has the largest sum and return its sum.
-*/
+ */
 
 /**
  * @param {number[]} nums
  * @return {number}
  */
-var maxSubArray = function(nums) {
+var maxSubArray = function (nums: number[]) {
   let sum = 0;
   let max = -Infinity;
 

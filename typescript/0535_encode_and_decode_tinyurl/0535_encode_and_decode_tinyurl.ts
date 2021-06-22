@@ -15,7 +15,7 @@
  * @param {string} longUrl
  * @return {string}
  */
-var encode = function(longUrl) {};
+// var encode = function (longUrl: string) {};
 
 /**
  * Decodes a shortened URL to its original URL.
@@ -23,7 +23,7 @@ var encode = function(longUrl) {};
  * @param {string} shortUrl
  * @return {string}
  */
-var decode = function(shortUrl) {};
+// var decode = function (shortUrl: string) {};
 
 /**
  * Your functions will be called as such:

@@ -30,6 +30,7 @@ const letterCombinations = function (digits: string) {
       return;
     }
 
+    // @ts-ignore
     const letters = numbers[digits[index]];
 
     for (let i = 0; i < letters.length; i++) {

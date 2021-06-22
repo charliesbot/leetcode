@@ -1,14 +1,5 @@
-class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val: number) {
-    this.val = val;
-    this.next = null;
-  }
-}
-
 const swapPairs = function (head: ListNode) {
-  let newHead = new ListNode(-1);
+  let newHead = new ListNode({ value: -1 });
   newHead.next = head;
   let current: ListNode | null = newHead;
   let stack: ListNode[] = [];

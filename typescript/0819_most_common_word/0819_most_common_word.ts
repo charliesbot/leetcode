@@ -8,24 +8,24 @@
  * and free of punctuation. Words in the paragraph are not case sensitive.
  *
  * The answer is in lowercase.
-*/
+ */
 
 /**
  * @param {string} paragraph
  * @param {string[]} banned
  * @return {string}
  */
-var mostCommonWord = function(paragraph, banned) {
-  banned = new Set(banned);
+var mostCommonWord = function (paragraph: string, banned: string[]): string {
+  const bannedSet = new Set(banned);
   const punctuation = new Set([".", ",", " ", "!", "?"]);
-  const hash = {};
+  const hash: { [key: string]: number } = {};
   let maxWord = "";
   let currentWord = "";
   for (let i = 0; i <= paragraph.length; i++) {
     const char = paragraph[i];
     if (punctuation.has(char) || i === paragraph.length) {
       currentWord = currentWord.toLowerCase();
-      if (!banned.has(currentWord) && currentWord) {
+      if (!bannedSet.has(currentWord) && currentWord) {
         hash[currentWord] = hash[currentWord] || 0;
         hash[currentWord]++;
         maxWord = hash[maxWord] > hash[currentWord] ? maxWord : currentWord;

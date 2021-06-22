@@ -6,7 +6,7 @@
  * You may assume the integer does not contain any leading zero, except the number 0 itself.
  */
 
-var plusOne = function(digits) {
+var plusOne = function (digits: number[]) {
   for (let i = digits.length - 1; i >= 0; i--) {
     digits[i] += 1;
 
