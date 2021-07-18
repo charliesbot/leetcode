@@ -9,7 +9,7 @@ TEST(TwoSumTest, Example1) {
   const vector<int> mock = Solution().twoSum(nums, 9);
 
   const vector<int> solution = {1, 0};
-  for (uint i = 0; i < mock.size(); ++i) {
+  for (int i = 0; i < mock.size(); ++i) {
     EXPECT_EQ(solution[i], mock[i]);
   }
 }

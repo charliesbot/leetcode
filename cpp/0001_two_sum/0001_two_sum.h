@@ -8,11 +8,11 @@ class Solution {
 public:
   vector<int> twoSum(vector<int> &nums, int target) {
     unordered_map<int, int> umap;
-    for (uint i = 0; i < nums.size(); i++) {
+    for (int i = 0; i < nums.size(); i++) {
       const int current = nums[i];
 
       if (umap.count(current) > 0) {
-        return {(int)i, umap[current]};
+        return {i, umap[current]};
       }
 
       const int diff = target - nums[i];
