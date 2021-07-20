@@ -14,7 +14,7 @@ public:
     int max_length = 0;
     int start = 0;
 
-    for (int i = 0; i < s.length(); i++) {
+    for (size_t i = 0; i < s.length(); i++) {
       const char &letter = s[i];
 
       if (hash.find(letter) != hash.end() && hash[letter] >= start) {

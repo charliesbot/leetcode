@@ -7,23 +7,23 @@ using std::string;
 TEST(ValidParenthesisTest, SimpleString) {
   string s = "()";
 
-  ASSERT_TRUE(Solution().isValid(s));
+  EXPECT_TRUE(Solution().isValid(s));
 }
 
 TEST(ValidParenthesisTest, AllSymbolsString) {
   string s = "()[]{}";
 
-  ASSERT_TRUE(Solution().isValid(s));
+  EXPECT_TRUE(Solution().isValid(s));
 }
 
 TEST(ValidParenthesisTest, InvalidString) {
   string s = "(]";
 
-  ASSERT_FALSE(Solution().isValid(s));
+  EXPECT_FALSE(Solution().isValid(s));
 }
 
 TEST(ValidParenthesisTest, InvalidString2) {
   string s = "]";
 
-  ASSERT_FALSE(Solution().isValid(s));
+  EXPECT_FALSE(Solution().isValid(s));
 }

@@ -1,21 +1,22 @@
-import { multiply } from "./0043_multiply_strings";
+#include "0043_multiply_strings.h"
+#include <gtest/gtest.h>
 
-test("multiply1", () => {
-  expect(multiply("2", "3")).toEqual("6");
-});
+TEST(MultiplyStrings, Example1) {
+  EXPECT_EQ(Solution().multiply("2", "3"), "6");
+}
 
-test("multiply2", () => {
-  expect(multiply("589", "24")).toBe("14136");
-});
+TEST(MultiplyStrings, Example2) {
+  EXPECT_EQ(Solution().multiply("589", "24"), "14136");
+}
 
-test("multiply3", () => {
-  expect(multiply("5891", "243")).toBe("1431513");
-});
+TEST(MultiplyStrings, Example3) {
+  EXPECT_EQ(Solution().multiply("5891", "243"), "1431513");
+}
 
-test("multiply4", () => {
-  expect(multiply("123", "456")).toEqual("56088");
-});
+TEST(MultiplyStrings, Example4) {
+  EXPECT_EQ(Solution().multiply("123", "456"), "56088");
+}
 
-test("multiply5", () => {
-  expect(multiply("0", "0")).toEqual("0");
-});
+TEST(MultiplyStrings, Example5) {
+  EXPECT_EQ(Solution().multiply("0", "0"), "0");
+}
