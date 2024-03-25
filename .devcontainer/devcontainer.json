@@ -1,0 +1,15 @@
+{
+  "name": "LeetCode",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "postCreateCommand": "sh .devcontainer/post_create_command.sh",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "latest"
+    }
+  },
+  // "forwardPorts": [],
+  "remoteUser": "root"
+}
