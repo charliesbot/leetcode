@@ -1,42 +1,22 @@
+# Dependencies
+node_modules/
+target/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
-# Prerequisites
-*.d
+Thumbs.db
 
-# Compiled Object files
-*.slo
-*.lo
+# Build outputs
+dist/
+build/
+*.class
 *.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.dSYM.zip
-*.dSYM
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
 *.exe
-*.out
-*.app
-
-# Ignore all bazel-* symlinks. There is no full list since this can change
-# based on the name of the directory bazel is cloned into.
-bazel-*
-
-node_modules
-compile_commands.json
