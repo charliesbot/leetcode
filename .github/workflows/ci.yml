@@ -4,30 +4,34 @@ on: [push, pull_request]
 
 jobs:
   test:
-    # virtual environments: https://github.com/actions/virtual-environments
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
-      # Caches and restores the bazelisk download directory, the bazel build directory.
-      - name: Cache bazel
-        uses: actions/cache@v2
-        env:
-          cache-name: bazel-cache
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          path: |
-            ~/.cache/bazelisk
-            ~/.cache/bazel
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ github.ref }}
-          restore-keys: |
-            ${{ runner.os }}-${{ env.cache-name }}-development
+          node-version: '24.2.0'
+          cache: 'npm'
+          cache-dependency-path: typescript/package-lock.json
 
-      # Checks-out your repository under $GITHUB_WORKSPACE, which is the CWD for
-      # the rest of the steps
-      - uses: actions/checkout@v2
+      - name: Install leetkick globally
+        run: npm install -g leetkick
 
-      # build
-      - name: Build the code
-        run: bazel build //...
-      - name: Run the test
-        run: bazel test //...
+      - name: Install TypeScript dependencies
+        run: |
+          cd typescript
+          npm ci
 
+      - name: Setup C++ build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential g++
+
+      - name: Run TypeScript tests
+        run: leetkick test --language typescript
+
+      - name: Run C++ tests
+        run: leetkick test --language cpp
