@@ -47,7 +47,7 @@ class Solution {
                 const int a = num1[j] - '0';
                 const int b = num2[i] - '0';
                 const int current = a * b + carry + result[result_index];
-                carry = floor(current / 10);
+                carry = current / 10;
                 result[result_index] = current % 10;
                 if (j == 0 && carry > 0) {
                     result[num1.length() + flag] += carry;
