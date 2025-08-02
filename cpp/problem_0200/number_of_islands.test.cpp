@@ -96,7 +96,7 @@ TEST_CASE("Number of Islands", "[number_of_islands]") {
             {'0','1','1','0'},
             {'1','0','0','1'}
         };
-        REQUIRE(solution.numIslands(grid) == 6); // Diagonal cells don't connect
+        REQUIRE(solution.numIslands(grid) == 5); // Diagonal cells don't connect
     }
 
     SECTION("Complex shapes") {

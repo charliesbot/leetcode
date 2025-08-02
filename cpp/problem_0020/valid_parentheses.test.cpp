@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
-#include "../catch_amalgamated.hpp"
 #include "valid_parentheses.cpp"
+
+#include "../catch_amalgamated.hpp"
 
 TEST_CASE("Valid Parentheses", "[valid_parentheses]") {
     Solution solution;
@@ -55,7 +56,6 @@ TEST_CASE("Valid Parentheses", "[valid_parentheses]") {
         REQUIRE(solution.isValid("(){}[]") == true);
         REQUIRE(solution.isValid("({[]})") == true);
         REQUIRE(solution.isValid("()[]{()}") == true);
-        REQUIRE(solution.isValid("(({}[]))())") == true);
     }
 
     SECTION("Complex invalid combinations") {

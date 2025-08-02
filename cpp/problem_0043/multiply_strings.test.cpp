@@ -49,14 +49,14 @@ TEST_CASE("Multiply Strings", "[multiply_strings]") {
     SECTION("Numbers with different lengths") {
         REQUIRE(solution.multiply("1", "9999") == "9999");
         REQUIRE(solution.multiply("9999", "1") == "9999");
-        REQUIRE(solution.multiply("123", "45678") == "5617494");
+        REQUIRE(solution.multiply("123", "45678") == "5618394");
         REQUIRE(solution.multiply("98765", "43") == "4246895");
     }
 
     SECTION("Large number multiplications") {
         REQUIRE(solution.multiply("999", "999") == "998001");
         REQUIRE(solution.multiply("1234", "5678") == "7006652");
-        REQUIRE(solution.multiply("9876", "5432") == "53629632");
+        REQUIRE(solution.multiply("9876", "5432") == "53646432");
     }
 
     SECTION("Numbers with trailing zeros in result") {
@@ -115,7 +115,7 @@ TEST_CASE("Multiply Strings", "[multiply_strings]") {
         REQUIRE(solution.multiply("271", "319") == "86449");
         REQUIRE(solution.multiply("987", "654") == "645498");
         REQUIRE(solution.multiply("1357", "2468") == "3349076");
-        REQUIRE(solution.multiply("13579", "24681") == "335139499");
+        REQUIRE(solution.multiply("13579", "24681") == "335143299");
     }
 
     SECTION("Maximum constraint edge cases") {
