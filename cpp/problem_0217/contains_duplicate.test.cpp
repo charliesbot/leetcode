@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN
-#include "../catch_amalgamated.hpp"
 #include "contains_duplicate.cpp"
+
+#include "../catch_amalgamated.hpp"
 
 TEST_CASE("Contains Duplicate", "[contains_duplicate]") {
     Solution solution;
@@ -124,7 +125,7 @@ TEST_CASE("Contains Duplicate", "[contains_duplicate]") {
 
         // Large array with one duplicate at the end
         vector<int> large_with_dup = large_unique;
-        large_with_dup.push_back(500); // Duplicate of existing element
+        large_with_dup.push_back(500);  // Duplicate of existing element
         REQUIRE(solution.containsDuplicate(large_with_dup) == true);
     }
 
@@ -139,7 +140,7 @@ TEST_CASE("Contains Duplicate", "[contains_duplicate]") {
 
         // Fibonacci-like sequence
         vector<int> nums3 = {1, 1, 2, 3, 5, 8, 13};
-        REQUIRE(solution.containsDuplicate(nums3) == true); // Two 1's
+        REQUIRE(solution.containsDuplicate(nums3) == true);  // Two 1's
     }
 
     SECTION("Multiple duplicates") {
