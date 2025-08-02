@@ -1,6 +1,6 @@
 import { test, expect } from 'vitest';
 import { numIslands } from './NumberOfIslands';
-import { numIslandsBFS } from './0200_number_of_islands.bfs';
+import { numIslandsBFS } from './NumberOfIslandsBFS';
 
 test('numberOfIslandsDFS1', () => {
   const input = [
