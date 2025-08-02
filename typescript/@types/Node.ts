@@ -1,18 +1,12 @@
-type ListNodeConstructor = {
-  key?: number;
-  value: number;
-};
-
-class ListNode {
-  prev: ListNode | null;
-  next: ListNode | null;
+declare class ListNode {
   val: number;
+  next: ListNode | null;
+  prev?: ListNode | null;
   key?: number;
-
-  constructor({ key, value }: ListNodeConstructor) {
-    this.prev = null;
-    this.next = null;
-    this.val = value;
-    this.key = key;
-  }
+  
+  constructor(val: number, next?: ListNode | null);
+  constructor(options: { key?: number; value: number });
 }
+
+declare function createLinkedList(values: number[]): ListNode | null;
+declare function linkedListToArray(head: ListNode | null): number[];
