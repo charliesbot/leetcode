@@ -9,7 +9,7 @@ const topKFrequent = (nums: number[], k: number) => {
   const result = [];
   let bucket: number[][] = new Array();
 
-  nums.forEach((n) => {
+  nums.forEach(n => {
     hash[n] = hash[n] || 0;
     hash[n]++;
   });
@@ -19,7 +19,7 @@ const topKFrequent = (nums: number[], k: number) => {
     bucket[hash[num]].push(parseInt(num));
   }
 
-  bucket = bucket.filter((b) => b);
+  bucket = bucket.filter(b => b);
 
   for (let i = bucket.length - 1; i >= 0 && k > 0; k--) {
     result.push(bucket[i].pop());

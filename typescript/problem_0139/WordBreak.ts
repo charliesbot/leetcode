@@ -40,5 +40,5 @@ var wordBreak = function (s: string, wordDict: string[]) {
   return isWordBreak.has(s.length);
 };
 
-const dict = ["aaa", "aaaa"];
-console.log(wordBreak("aaaaaaa", dict));
+const dict = ['aaa', 'aaaa'];
+console.log(wordBreak('aaaaaaa', dict));

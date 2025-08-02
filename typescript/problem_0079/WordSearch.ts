@@ -24,13 +24,13 @@ const dfs = (
     row >= otherBoard.length ||
     column < 0 ||
     column >= otherBoard[row].length ||
-    otherBoard[row][column] === "-" ||
+    otherBoard[row][column] === '-' ||
     otherBoard[row][column] !== word[indexChar]
   ) {
     return false;
   }
 
-  otherBoard[row][column] = "-";
+  otherBoard[row][column] = '-';
 
   indexChar++;
 

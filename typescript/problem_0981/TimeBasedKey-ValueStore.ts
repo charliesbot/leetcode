@@ -33,7 +33,7 @@ export class TimeMap {
     const tail = helper.length - 1;
 
     if (!helper || timestamp < helper[0].timestamp) {
-      return "";
+      return '';
     }
 
     if (timestamp >= helper[tail].timestamp) {

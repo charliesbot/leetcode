@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest';
 import { kClosest } from './KClosestPointsToOrigin';
 
-test("test1", () => {
+test('test1', () => {
   const points = [
     [1, 3],
     [-2, 2],

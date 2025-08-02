@@ -4,33 +4,33 @@
  * Difficulty: TODO
  */
 
-var strWithout3a3b = function(A: number, B: number) {
-  let string = "";
+var strWithout3a3b = function (A: number, B: number) {
+  let string = '';
   while (true) {
     if (A > B && B > 0) {
-      string += "aab";
+      string += 'aab';
       A -= 2;
       B -= 1;
     }
 
     if (B > A && A > 0) {
-      string += "bba";
+      string += 'bba';
       B -= 2;
       A -= 1;
     }
 
     if (A === B) {
-      string += "ab".repeat(A);
+      string += 'ab'.repeat(A);
       return string;
     }
 
     if (B === 0) {
-      string += "a".repeat(A);
+      string += 'a'.repeat(A);
       return string;
     }
 
     if (A === 0) {
-      string += "b".repeat(B);
+      string += 'b'.repeat(B);
       return string;
     }
   }

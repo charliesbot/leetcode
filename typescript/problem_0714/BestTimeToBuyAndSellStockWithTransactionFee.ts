@@ -23,7 +23,7 @@ const maxProfit = (prices: number[], fee: number): number => {
   let preSell = 0;
   let preBuy = 0;
 
-  prices.forEach((price) => {
+  prices.forEach(price => {
     preBuy = buy;
     buy = Math.max(preBuy, preSell - price);
     sell = Math.max(preBuy + price - fee, preSell);

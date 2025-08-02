@@ -1,49 +1,49 @@
 import { test, expect } from 'vitest';
 import { exist } from './WordSearch';
 
-test("exist1", () => {
+test('exist1', () => {
   const board = [
-    ["A", "B", "C", "E"],
-    ["S", "F", "C", "S"],
-    ["A", "D", "E", "E"],
+    ['A', 'B', 'C', 'E'],
+    ['S', 'F', 'C', 'S'],
+    ['A', 'D', 'E', 'E'],
   ];
-  expect(exist(board, "ABCCED")).toBeTruthy();
+  expect(exist(board, 'ABCCED')).toBeTruthy();
 });
 
-test("exist2", () => {
+test('exist2', () => {
   const board = [
-    ["A", "B", "C", "E"],
-    ["S", "F", "C", "S"],
-    ["A", "D", "E", "E"],
+    ['A', 'B', 'C', 'E'],
+    ['S', 'F', 'C', 'S'],
+    ['A', 'D', 'E', 'E'],
   ];
-  expect(exist(board, "SEE")).toBeTruthy();
+  expect(exist(board, 'SEE')).toBeTruthy();
 });
 
-test("exist3", () => {
+test('exist3', () => {
   const board = [
-    ["A", "B", "C", "E"],
-    ["S", "F", "C", "S"],
-    ["A", "D", "E", "E"],
+    ['A', 'B', 'C', 'E'],
+    ['S', 'F', 'C', 'S'],
+    ['A', 'D', 'E', 'E'],
   ];
-  expect(exist(board, "ABCB")).toBeFalsy();
+  expect(exist(board, 'ABCB')).toBeFalsy();
 });
 
-test("exist4", () => {
+test('exist4', () => {
   const board = [
-    ["C", "A", "A"],
-    ["A", "A", "A"],
-    ["B", "C", "D"],
+    ['C', 'A', 'A'],
+    ['A', 'A', 'A'],
+    ['B', 'C', 'D'],
   ];
 
-  expect(exist(board, "AAB")).toBeTruthy();
+  expect(exist(board, 'AAB')).toBeTruthy();
 });
 
-test("exist5", () => {
+test('exist5', () => {
   const board = [
-    ["A", "B", "C", "E"],
-    ["S", "F", "E", "S"],
-    ["A", "D", "E", "E"],
+    ['A', 'B', 'C', 'E'],
+    ['S', 'F', 'E', 'S'],
+    ['A', 'D', 'E', 'E'],
   ];
 
-  expect(exist(board, "ABCESEEEFS")).toBeTruthy();
+  expect(exist(board, 'ABCESEEEFS')).toBeTruthy();
 });

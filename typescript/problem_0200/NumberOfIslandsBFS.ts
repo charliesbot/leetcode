@@ -20,12 +20,12 @@ export const numIslandsBFS = (grid: string[][]) => {
       if (
         !grid[rowHelper] ||
         !grid[rowHelper][columnHelper] ||
-        grid[rowHelper][columnHelper] === "0"
+        grid[rowHelper][columnHelper] === '0'
       ) {
         continue;
       }
 
-      grid[rowHelper][columnHelper] = "0";
+      grid[rowHelper][columnHelper] = '0';
       queue.push({ rowHelper: rowHelper + 1, columnHelper });
       queue.push({ rowHelper: rowHelper - 1, columnHelper });
       queue.push({ rowHelper, columnHelper: columnHelper + 1 });
@@ -35,7 +35,7 @@ export const numIslandsBFS = (grid: string[][]) => {
 
   for (let row = 0; row < grid.length; row++) {
     for (let column = 0; column < grid[row].length; column++) {
-      if (grid[row][column] === "1") {
+      if (grid[row][column] === '1') {
         counter++;
         bfs(grid, row, column);
       }

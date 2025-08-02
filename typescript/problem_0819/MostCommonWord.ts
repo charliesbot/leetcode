@@ -23,10 +23,10 @@
  */
 var mostCommonWord = function (paragraph: string, banned: string[]): string {
   const bannedSet = new Set(banned);
-  const punctuation = new Set([".", ",", " ", "!", "?"]);
+  const punctuation = new Set(['.', ',', ' ', '!', '?']);
   const hash: { [key: string]: number } = {};
-  let maxWord = "";
-  let currentWord = "";
+  let maxWord = '';
+  let currentWord = '';
   for (let i = 0; i <= paragraph.length; i++) {
     const char = paragraph[i];
     if (punctuation.has(char) || i === paragraph.length) {
@@ -36,7 +36,7 @@ var mostCommonWord = function (paragraph: string, banned: string[]): string {
         hash[currentWord]++;
         maxWord = hash[maxWord] > hash[currentWord] ? maxWord : currentWord;
       }
-      currentWord = "";
+      currentWord = '';
     } else {
       currentWord += paragraph[i];
     }
@@ -45,4 +45,4 @@ var mostCommonWord = function (paragraph: string, banned: string[]): string {
   return maxWord;
 };
 
-console.log(mostCommonWord("Bob", []));
+console.log(mostCommonWord('Bob', []));

@@ -36,8 +36,8 @@ const ladderLength: LadderLength = (beginWord, endWord, wordList) => {
     dictionary.delete(word);
     for (let i = 0; i < word.length; i++) {
       for (
-        let char = "a";
-        char <= "z";
+        let char = 'a';
+        char <= 'z';
         char = String.fromCharCode(char.charCodeAt(0) + 1)
       ) {
         const combinedWord = word.slice(0, i) + char + word.slice(i + 1);

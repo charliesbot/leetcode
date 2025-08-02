@@ -17,11 +17,11 @@ var nextClosestTime = function (time: string) {
   let originalMinutes = parseInt(time.substring(0, 2)) * 60;
   originalMinutes += parseInt(time.substring(3, 5));
   let minValue = Number.MAX_SAFE_INTEGER;
-  let nextTime = "";
+  let nextTime = '';
   const set = new Set();
 
   for (let char of time) {
-    if (char !== ":") {
+    if (char !== ':') {
       set.add(char);
     }
   }
@@ -60,7 +60,7 @@ var nextClosestTime = function (time: string) {
     }
   };
 
-  dfs("");
+  dfs('');
 
   return nextTime;
 };

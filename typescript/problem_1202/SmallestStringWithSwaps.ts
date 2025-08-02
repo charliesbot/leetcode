@@ -46,11 +46,11 @@ const smallestStringWithSwaps = (s: string, pairs: number[][]): string => {
     groups[find(i)].push(i);
   }
 
-  const sArr = s.split("");
+  const sArr = s.split('');
 
   for (let i = 0; i < s.length; i++) {
     if (groups[i].length > 1) {
-      const chars = groups[i].map((idx) => s[idx]);
+      const chars = groups[i].map(idx => s[idx]);
       chars.sort();
       for (let k = 0; k < groups[i].length; k++) {
         sArr[groups[i][k]] = chars[k];
@@ -58,7 +58,7 @@ const smallestStringWithSwaps = (s: string, pairs: number[][]): string => {
     }
   }
 
-  return sArr.join("");
+  return sArr.join('');
 };
 
 export { smallestStringWithSwaps };

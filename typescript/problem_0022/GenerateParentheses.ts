@@ -25,18 +25,18 @@ const dfs: DFS = (result, string, left, right, n) => {
   }
 
   if (left < n) {
-    dfs(result, string + "(", left + 1, right, n);
+    dfs(result, string + '(', left + 1, right, n);
   }
 
   if (right < left) {
-    dfs(result, string + ")", left, right + 1, n);
+    dfs(result, string + ')', left, right + 1, n);
   }
 };
 
 const generateParenthesis = (n: number): string[] => {
   const result: string[] = [];
 
-  dfs(result, "", 0, 0, n);
+  dfs(result, '', 0, 0, n);
 
   return result;
 };

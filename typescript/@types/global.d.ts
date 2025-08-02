@@ -25,7 +25,10 @@ declare global {
   val: number;
   key?: number;
 
-  constructor(valOrOptions: number | ListNodeConstructor, next: ListNode | null = null) {
+  constructor(
+    valOrOptions: number | ListNodeConstructor,
+    next: ListNode | null = null
+  ) {
     if (typeof valOrOptions === 'object') {
       this.prev = null;
       this.next = null;
@@ -40,29 +43,33 @@ declare global {
   }
 };
 
-(globalThis as any).createLinkedList = function(values: number[]): ListNode | null {
+(globalThis as any).createLinkedList = function (
+  values: number[]
+): ListNode | null {
   if (values.length === 0) return null;
-  
+
   const head = new ListNode(values[0]);
   let current = head;
-  
+
   for (let i = 1; i < values.length; i++) {
     current.next = new ListNode(values[i]);
     current = current.next;
   }
-  
+
   return head;
 };
 
-(globalThis as any).linkedListToArray = function(head: ListNode | null): number[] {
+(globalThis as any).linkedListToArray = function (
+  head: ListNode | null
+): number[] {
   const result: number[] = [];
   let current = head;
-  
+
   while (current !== null) {
     result.push(current.val);
     current = current.next;
   }
-  
+
   return result;
 };
 

@@ -16,9 +16,9 @@
 
 const isValidParenthesis = (s: string): boolean => {
   const dict: { [key: string]: string } = {
-    "(": ")",
-    "{": "}",
-    "[": "]",
+    '(': ')',
+    '{': '}',
+    '[': ']',
   };
   const array: string[] = [];
 

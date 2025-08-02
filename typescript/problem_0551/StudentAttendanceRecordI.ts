@@ -18,11 +18,11 @@ export const checkRecord = (s: string) => {
   let aCounter = 0;
 
   for (let i = 0; i < s.length; i++) {
-    if (s[i] === "A") {
+    if (s[i] === 'A') {
       aCounter++;
     }
 
-    const lCheck = s[i] === "L" && s[i] === s[i - 1] && s[i] === s[i - 2];
+    const lCheck = s[i] === 'L' && s[i] === s[i - 1] && s[i] === s[i - 2];
 
     if (aCounter > 1 || lCheck) {
       return false;

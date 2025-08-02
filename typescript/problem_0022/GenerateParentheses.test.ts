@@ -1,8 +1,8 @@
 import { test, expect } from 'vitest';
 import { generateParenthesis } from './GenerateParentheses';
 
-test("test1", () => {
+test('test1', () => {
   const n = 3;
-  const result = ["((()))", "(()())", "(())()", "()(())", "()()()"];
+  const result = ['((()))', '(()())', '(())()', '()(())', '()()()'];
   expect(generateParenthesis(n)).toStrictEqual(result);
 });

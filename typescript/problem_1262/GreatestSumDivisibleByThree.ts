@@ -13,7 +13,7 @@
 const maxSumDivThree = (nums: number[]): number => {
   let dp = [0, -Infinity, -Infinity];
 
-  nums.forEach((num) => {
+  nums.forEach(num => {
     const temp = [0, 0, 0];
     temp[0] = Math.max(dp[0], dp[num % 3] + num);
     temp[1] = Math.max(dp[1], dp[(num + 1) % 3] + num);

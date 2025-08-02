@@ -15,7 +15,7 @@
  * Your algorithm's runtime complexity must be in the order of O(log n).
  */
 
-var search = function(nums: number[], target: number) {
+var search = function (nums: number[], target: number) {
   let left = 0;
   let right = nums.length - 1;
   while (left <= right) {

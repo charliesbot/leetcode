@@ -38,7 +38,7 @@ const multiply = (num1: string, num2: string) => {
     result.pop();
   }
 
-  return result.reverse().join("");
+  return result.reverse().join('');
 };
 
 export { multiply };

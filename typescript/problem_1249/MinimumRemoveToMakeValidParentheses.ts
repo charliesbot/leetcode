@@ -17,25 +17,25 @@
  */
 
 type Entry = {
-  symbol: "(" | ")";
+  symbol: '(' | ')';
   index: number;
 };
 
 const minRemoveToMakeValid = (s: string): string => {
   const stack: Entry[] = [];
-  let result = "";
+  let result = '';
 
   for (let i = 0; i < s.length; i++) {
     const char = s[i];
-    if (char === "(") {
+    if (char === '(') {
       stack.push({ symbol: char, index: i });
       continue;
     }
 
-    if (char === ")") {
+    if (char === ')') {
       if (stack.length > 0) {
         const entry = stack.pop()!;
-        if (entry.symbol === "(") {
+        if (entry.symbol === '(') {
           continue;
         }
 

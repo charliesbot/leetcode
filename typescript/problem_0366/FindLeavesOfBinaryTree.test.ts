@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest';
 import { findLeaves, TreeNode } from './FindLeavesOfBinaryTree';
 
-test("test1", () => {
+test('test1', () => {
   const head = new TreeNode(1);
   head.left = new TreeNode(2);
   head.right = new TreeNode(3);

@@ -40,7 +40,7 @@ const kClosest = (points: number[][], K: number): number[][] => {
 
   distances.sort((a, b) => a.distance - b.distance);
 
-  return distances.slice(0, K).map((distances) => distances.points);
+  return distances.slice(0, K).map(distances => distances.points);
 };
 
 export { kClosest };

@@ -17,7 +17,7 @@
 const addStrings = (num1: string, num2: string): string => {
   let num1Cursor = num1.length - 1;
   let num2Cursor = num2.length - 1;
-  let result = "";
+  let result = '';
 
   let carry = 0;
 

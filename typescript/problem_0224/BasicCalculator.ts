@@ -30,16 +30,16 @@ const calculate = (s: string): number => {
 
   for (let i = 0; i < s.length; i++) {
     const currentChar = s[i];
-    if (currentChar === " ") {
+    if (currentChar === ' ') {
       continue;
     }
 
-    if (currentChar === "+") {
+    if (currentChar === '+') {
       sign = 1;
       continue;
     }
 
-    if (currentChar === "-") {
+    if (currentChar === '-') {
       sign = -1;
       continue;
     }
@@ -54,7 +54,7 @@ const calculate = (s: string): number => {
       continue;
     }
 
-    if (currentChar === "(") {
+    if (currentChar === '(') {
       stack.push(result);
       result = 0;
       operators.push(sign);
@@ -62,7 +62,7 @@ const calculate = (s: string): number => {
       continue;
     }
 
-    if (currentChar === ")") {
+    if (currentChar === ')') {
       const operator = operators.pop() || 1;
       const previousResult = stack.pop() || 0;
       result = operator * result + previousResult;

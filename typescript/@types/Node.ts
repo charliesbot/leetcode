@@ -3,7 +3,7 @@ declare class ListNode {
   next: ListNode | null;
   prev?: ListNode | null;
   key?: number;
-  
+
   constructor(val: number, next?: ListNode | null);
   constructor(options: { key?: number; value: number });
 }

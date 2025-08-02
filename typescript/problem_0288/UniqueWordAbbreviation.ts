@@ -36,8 +36,8 @@ class ValidWordAbbr {
  * var param_1 = obj.isUnique(word)
  */
 
-const valid = new ValidWordAbbr(["deer", "door", "cake", "card"]);
-valid.isUnique("dear");
-valid.isUnique("door");
-valid.isUnique("cart");
-valid.isUnique("cake");
+const valid = new ValidWordAbbr(['deer', 'door', 'cake', 'card']);
+valid.isUnique('dear');
+valid.isUnique('door');
+valid.isUnique('cart');
+valid.isUnique('cake');
