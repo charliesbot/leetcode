@@ -18,8 +18,7 @@ const multiply = (num1: string, num2: string) => {
   for (let i = B.length - 1; i >= 0; i--) {
     for (let j = A.length - 1; j >= 0; j--) {
       const resultIndex = A.length - 1 - j + flag;
-      const current =
-        parseInt(A[j]) * parseInt(B[i]) + carry + result[resultIndex];
+      const current = parseInt(A[j]) * parseInt(B[i]) + carry + result[resultIndex];
       carry = Math.floor(current / 10);
       result[resultIndex] = current % 10;
       if (j === 0 && carry > 0) {

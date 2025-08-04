@@ -39,10 +39,7 @@ const asteroidCollision = (asteroids: number[]): number[] => {
       result.push(asteroid);
     }
 
-    if (
-      result[result.length - 1] > 0 &&
-      result[result.length - 1] === -asteroid
-    ) {
+    if (result[result.length - 1] > 0 && result[result.length - 1] === -asteroid) {
       result.pop();
     }
   }

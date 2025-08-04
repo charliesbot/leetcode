@@ -24,10 +24,7 @@ const longestPalindrome = (s: string): string => {
   let longestLength = 0;
 
   for (let i = 0; i < s.length; i++) {
-    longestLength = Math.max(
-      expandFromCenter(s, i, i),
-      expandFromCenter(s, i, i + 1)
-    );
+    longestLength = Math.max(expandFromCenter(s, i, i), expandFromCenter(s, i, i + 1));
 
     if (longestLength > end - start) {
       start = i - Math.floor((longestLength - 1) / 2);

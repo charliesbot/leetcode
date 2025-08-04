@@ -10,13 +10,7 @@
  * combinations of well-formed parentheses.
  */
 
-type DFS = (
-  result: string[],
-  string: string,
-  left: number,
-  right: number,
-  n: number
-) => void;
+type DFS = (result: string[], string: string, left: number, right: number, n: number) => void;
 
 const dfs: DFS = (result, string, left, right, n) => {
   if (string.length === n * 2) {

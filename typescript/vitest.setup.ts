@@ -1,2 +1,2 @@
-// Import the global definitions to make them available in tests
-import './@types/global.d.ts';
+// Import the global definitions and implementations to make them available in tests
+import './global-impl';

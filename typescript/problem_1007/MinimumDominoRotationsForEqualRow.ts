@@ -38,7 +38,7 @@ const minDominoRotations = (A: number[], B: number[]): number => {
     countSwaps(A[0], A, B),
     countSwaps(B[0], A, B),
     countSwaps(A[0], B, A),
-    countSwaps(B[0], B, A)
+    countSwaps(B[0], B, A),
   );
 
   return min < Infinity ? min : -1;

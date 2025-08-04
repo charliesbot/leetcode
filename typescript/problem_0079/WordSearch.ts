@@ -17,7 +17,7 @@ const dfs = (
   row: number,
   column: number,
   indexChar: number,
-  word: string
+  word: string,
 ): boolean => {
   if (
     row < 0 ||

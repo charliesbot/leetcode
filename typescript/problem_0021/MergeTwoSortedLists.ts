@@ -4,10 +4,7 @@
  * Difficulty: TODO
  */
 
-const mergeTwoLists = function (
-  l1: ListNode | null,
-  l2: ListNode | null
-): ListNode | null {
+const mergeTwoLists = function (l1: ListNode | null, l2: ListNode | null): ListNode | null {
   let head = new ListNode(-1);
   let l3 = head;
   while (l1 && l2) {

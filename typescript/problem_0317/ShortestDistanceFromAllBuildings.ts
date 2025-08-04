@@ -17,7 +17,7 @@ const bfs = (
   column: number,
   distances: number[][],
   reach: number[][],
-  grid: number[][]
+  grid: number[][],
 ) => {
   const queue = [[row, column]];
   const distanceQueue = [0];
@@ -38,10 +38,7 @@ const bfs = (
     ];
 
     options.forEach(([optionRow, optionColumn]) => {
-      if (
-        !visited?.[optionRow]?.[optionColumn] &&
-        grid?.[optionRow]?.[optionColumn] === 0
-      ) {
+      if (!visited?.[optionRow]?.[optionColumn] && grid?.[optionRow]?.[optionColumn] === 0) {
         queue.push([optionRow, optionColumn]);
         distanceQueue.push(distance + 1);
         distances[optionRow][optionColumn] += distance + 1;

@@ -21,11 +21,7 @@
  *    - You may assume beginWord and endWord are non-empty and are not the same.
  */
 
-type LadderLength = (
-  beginWord: string,
-  endWord: string,
-  wordList: string[]
-) => number;
+type LadderLength = (beginWord: string, endWord: string, wordList: string[]) => number;
 
 const ladderLength: LadderLength = (beginWord, endWord, wordList) => {
   const dictionary = new Set(wordList);
@@ -35,11 +31,7 @@ const ladderLength: LadderLength = (beginWord, endWord, wordList) => {
   const wordCombinator = (word: string) => {
     dictionary.delete(word);
     for (let i = 0; i < word.length; i++) {
-      for (
-        let char = 'a';
-        char <= 'z';
-        char = String.fromCharCode(char.charCodeAt(0) + 1)
-      ) {
+      for (let char = 'a'; char <= 'z'; char = String.fromCharCode(char.charCodeAt(0) + 1)) {
         const combinedWord = word.slice(0, i) + char + word.slice(i + 1);
         if (dictionary.has(combinedWord)) {
           queue.push(combinedWord);
