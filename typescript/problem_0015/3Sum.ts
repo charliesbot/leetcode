@@ -47,5 +47,4 @@ const threeSum = (nums: number[]) => {
 };
 
 const testInput = [-2, 0, 0, 2, 2];
-// const input = [-1,0,1,2,-1,-4];
 threeSum(testInput);

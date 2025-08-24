@@ -4,7 +4,8 @@ This workspace is configured for solving LeetCode problems in TypeScript.
 
 ## Setup
 - **Vitest** for testing and test runner
-- **Biome** for fast linting and formatting  
+- **ESLint** with TypeScript support for code quality
+- **Prettier** for consistent code formatting
 - **TypeScript** for type safety and modern JavaScript features
 
 ## Prerequisites
@@ -73,6 +74,8 @@ npx vitest
 npx tsc --noEmit
 
 # Lint and format code
-npm run lint
-npm run format
+npm run lint          # Check for linting issues
+npm run lint:fix      # Fix linting issues automatically
+npm run format        # Format code with Prettier
+npm run format:check  # Check if code is formatted
 ```
