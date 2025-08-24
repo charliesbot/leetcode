@@ -1,10 +1,4 @@
-/*
- * [15] 3Sum
- *
- * Difficulty: TODO
- */
-
-const threeSum = (nums: number[]) => {
+export const threeSum = (nums: number[]) => {
   const result = [];
 
   nums.sort((a, b) => a - b);
